@@ -47,13 +47,6 @@ path = ~/mainsail-config
 origin = https://github.com/mainsail-crew/mainsail-config.git
 managed_services = klipper
 
-[update_manager crowsnest]
-type = git_repo
-path = ~/crowsnest
-origin = https://github.com/mainsail-crew/crowsnest.git
-managed_services = crowsnest
-install_script = tools/pkglist.sh
-
 [update_manager sonar]
 type = git_repo
 path = ~/sonar
@@ -84,4 +77,13 @@ requirements = requirements.txt
 system_dependencies = system-dependencies.json
 primary_branch = main
 managed_services = klipper
+
+[update_manager klipper_tmc_autotune]
+type = git_repo
+channel = dev
+path = ~/klipper_tmc_autotune
+origin = https://github.com/andrewmcgr/klipper_tmc_autotune.git
+managed_services = klipper
+primary_branch = main
+install_script = install.sh
 
